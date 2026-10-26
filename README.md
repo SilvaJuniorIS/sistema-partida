@@ -64,9 +64,25 @@ content/
   jornadas e protocolos
 ```
 
+## Piloto funcional
+
+A primeira versão navegável já está implementada em `app/` com:
+
+- acesso local por conta e modo demonstração;
+- diagnóstico de cinco dimensões de fricção;
+- recomendação transparente;
+- cronômetro e registro de partidas;
+- jornada prática de 30 dias;
+- revisão semanal e exportação de dados;
+- biblioteca com eBook e podcast.
+
+Site privado de validação: https://sistema-partida-piloto.israeldasilvajunior.chatgpt.site
+
+Consulte [`app/README.md`](app/README.md) para executar localmente e conhecer as limitações da autenticação do piloto.
+
 ## Status
 
-Em desenvolvimento. A base editorial, científica e funcional está sendo consolidada no eBook e na documentação do produto.
+Piloto funcional publicado para validação. Próxima etapa: autenticação e persistência centralizadas, painel administrativo e preparação do beta público.
 
 ## Autoria
 

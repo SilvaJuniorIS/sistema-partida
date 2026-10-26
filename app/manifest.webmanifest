@@ -1,0 +1,10 @@
+{
+  "name": "Sistema PARTIDA",
+  "short_name": "PARTIDA",
+  "description": "Sistema prático para vencer a procrastinação e transformar intenção em ação.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f3eb",
+  "theme_color": "#071e2c",
+  "icons": []
+}

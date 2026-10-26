@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071e2c">
+  <meta name="description" content="Sistema PARTIDA — transforme intenção em uma próxima ação possível.">
+  <title>PARTIDA — Sistema antiprocrastinação</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+
+  <section id="welcome-view" class="welcome-view">
+    <div class="welcome-backdrop" aria-hidden="true">
+      <span class="orb orb-one"></span>
+      <span class="orb orb-two"></span>
+      <span class="path-line path-one"></span>
+      <span class="path-line path-two"></span>
+      <span class="path-line path-three"></span>
+    </div>
+
+    <header class="welcome-header wrap">
+      <a class="brand brand-light" href="#" aria-label="Sistema PARTIDA — início">
+        <span class="brand-mark">P</span>
+        <span><strong>PARTIDA</strong><small>por Ian Salvero</small></span>
+      </a>
+      <button class="button button-ghost-light" data-open-auth="login">Entrar</button>
+    </header>
+
+    <main class="welcome-main wrap">
+      <div class="welcome-copy">
+        <p class="eyebrow eyebrow-light">Comportamento • foco • ação</p>
+        <h1>Você não precisa vencer o dia inteiro. Precisa iniciar o próximo passo.</h1>
+        <p class="welcome-lead">Um sistema prático para reconhecer a fricção, reduzir o peso do começo e transformar intenção em movimento real.</p>
+        <div class="welcome-actions">
+          <button class="button button-primary button-large" data-open-auth="signup">Criar minha conta gratuita</button>
+          <button class="button button-text-light" data-open-auth="login">Já tenho uma conta <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="trust-row" aria-label="Características do piloto">
+          <span>✓ Jornada de 30 dias</span>
+          <span>✓ Diagnóstico em 2 minutos</span>
+          <span>✓ Dados neste dispositivo</span>
+        </div>
+      </div>
+
+      <div class="method-card" aria-label="Os sete movimentos do método PARTIDA">
+        <div class="method-head">
+          <span class="method-kicker">Seu próximo movimento</span>
+          <span class="status-pill">Piloto gratuito</span>
+        </div>
+        <ol class="method-list">
+          <li class="active"><span>P</span><div><strong>Perceber</strong><small>o padrão</small></div></li>
+          <li><span>A</span><div><strong>Acolher</strong><small>o desconforto</small></div></li>
+          <li><span>R</span><div><strong>Reduzir</strong><small>o escopo</small></div></li>
+          <li><span>T</span><div><strong>Tornar</strong><small>o passo visível</small></div></li>
+          <li><span>I</span><div><strong>Instalar</strong><small>as condições</small></div></li>
+          <li><span>D</span><div><strong>Dar</strong><small>a partida</small></div></li>
+          <li><span>A</span><div><strong>Avaliar</strong><small>e retornar</small></div></li>
+        </ol>
+      </div>
+    </main>
+
+    <footer class="welcome-footer wrap">
+      <span>Clareza para viver o que importa.</span>
+      <span>Conteúdo educativo — não substitui acompanhamento profissional.</span>
+    </footer>
+  </section>
+
+  <section id="auth-view" class="auth-view hidden" aria-labelledby="auth-title">
+    <div class="auth-visual">
+      <button class="back-link" id="auth-back" aria-label="Voltar para a página inicial">← Voltar</button>
+      <div class="auth-quote">
+        <span class="brand-mark brand-mark-large">P</span>
+        <blockquote>“A menor ação possível vale mais que a maior intenção adiada.”</blockquote>
+        <cite>Ian Salvero</cite>
+      </div>
+    </div>
+    <div class="auth-panel">
+      <div class="auth-box">
+        <p class="eyebrow" id="auth-eyebrow">Bem-vindo de volta</p>
+        <h2 id="auth-title">Entre no seu espaço</h2>
+        <p class="muted" id="auth-description">Retome exatamente do ponto em que parou.</p>
+
+        <form id="login-form" class="form-stack">
+          <label>E-mail
+            <input type="email" name="email" autocomplete="email" required placeholder="voce@exemplo.com">
+          </label>
+          <label>Senha
+            <span class="password-field"><input type="password" name="password" autocomplete="current-password" required placeholder="Sua senha"><button type="button" class="password-toggle" aria-label="Mostrar senha">Mostrar</button></span>
+          </label>
+          <button class="button button-primary button-full" type="submit">Entrar</button>
+          <button class="button button-link" type="button" data-switch-auth="signup">Ainda não tenho conta</button>
+        </form>
+
+        <form id="signup-form" class="form-stack hidden">
+          <label>Como podemos chamar você?
+            <input type="text" name="name" autocomplete="name" required maxlength="50" placeholder="Seu primeiro nome">
+          </label>
+          <label>E-mail
+            <input type="email" name="email" autocomplete="email" required placeholder="voce@exemplo.com">
+          </label>
+          <label>Crie uma senha
+            <span class="password-field"><input type="password" name="password" autocomplete="new-password" required minlength="8" placeholder="Mínimo de 8 caracteres"><button type="button" class="password-toggle" aria-label="Mostrar senha">Mostrar</button></span>
+          </label>
+          <label class="check-label"><input type="checkbox" name="terms" required><span>Li e aceito participar deste piloto educativo.</span></label>
+          <button class="button button-primary button-full" type="submit">Criar conta gratuita</button>
+          <button class="button button-link" type="button" data-switch-auth="login">Já tenho uma conta</button>
+        </form>
+
+        <div class="demo-box">
+          <strong>Acesso rápido para testes</strong>
+          <span>teste@partida.app</span>
+          <span>Senha: Partida123!</span>
+          <button class="button button-small button-secondary" id="fill-demo">Entrar no modo demonstração</button>
+        </div>
+        <p class="privacy-note">No piloto, contas e registros ficam somente neste navegador. Não use uma senha pessoal.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="app-view" class="app-view hidden">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#/hoje" aria-label="Sistema PARTIDA — painel">
+        <span class="brand-mark">P</span>
+        <span><strong>PARTIDA</strong><small>por Ian Salvero</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#/hoje" data-route="hoje"><span class="nav-icon">⌂</span>Hoje</a>
+        <a href="#/diagnostico" data-route="diagnostico"><span class="nav-icon">◎</span>Diagnóstico</a>
+        <a href="#/partida" data-route="partida"><span class="nav-icon">▶</span>Dar a partida</a>
+        <a href="#/jornada" data-route="jornada"><span class="nav-icon">◫</span>Jornada de 30 dias</a>
+        <a href="#/revisao" data-route="revisao"><span class="nav-icon">↻</span>Revisão</a>
+        <a href="#/biblioteca" data-route="biblioteca"><span class="nav-icon">▤</span>Biblioteca</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-progress">
+          <div class="mini-progress-head"><span>Jornada atual</span><strong id="side-progress">0%</strong></div>
+          <div class="progress-track"><span id="side-progress-bar"></span></div>
+        </div>
+        <button class="profile-chip" id="profile-button">
+          <span class="avatar" id="sidebar-avatar">IS</span>
+          <span><strong id="sidebar-name">Participante</strong><small>Piloto gratuito</small></span>
+          <span aria-hidden="true">⋮</span>
+        </button>
+      </div>
+    </aside>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menu-button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <div class="topbar-context"><span class="online-dot"></span><span>Seus dados estão salvos neste dispositivo</span></div>
+        <div class="topbar-actions">
+          <span class="date-label" id="today-label"></span>
+          <button class="icon-button" id="quick-start" title="Iniciar uma partida" aria-label="Iniciar uma partida">▶</button>
+        </div>
+      </header>
+      <main id="main" class="content" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <dialog id="confirm-dialog" class="confirm-dialog">
+    <form method="dialog">
+      <h3 id="confirm-title">Confirmar ação</h3>
+      <p id="confirm-message"></p>
+      <div class="dialog-actions">
+        <button class="button button-secondary" value="cancel">Cancelar</button>
+        <button class="button button-danger" id="confirm-action" value="confirm">Confirmar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
